@@ -6,16 +6,27 @@ function TextForm(props) {
     let newText = text.toUpperCase(); 
     setText(newText);
   };
-
+ 
   const handleDownClick = () => {
     console.log("Lowercase was clicked");
     let newText = text.toLowerCase();
     setText(newText);
   };
+  const handleCopyClick=()=>{
+    console.log("I am copy");
+    var text = document.getElementById("myBox");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  }
   const handleClearClick=()=>{
     console.log("text is cleared");
     let newText = "";
     setText(newText);
+  }
+
+  const handleExtraSpace=()=>{
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
   }
   const handleOnChange = (event) => {
     console.log("On change");
@@ -43,6 +54,9 @@ function TextForm(props) {
       </button>
       <button className="btn btn-primary mx-1" onClick={handleDownClick}>Convert To LowerCase</button>
       <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>
+      <button className="btn btn-primary mx-1" onClick={handleCopyClick}>Copy Text</button>
+      <button className="btn btn-primary mx-1" onClick={handleExtraSpace}>Handle Space</button>
+
     </div>
     <div className="container">
         <h1> Your text Summary</h1>
