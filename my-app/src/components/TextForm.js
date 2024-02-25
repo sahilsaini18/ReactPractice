@@ -24,10 +24,7 @@ function TextForm(props) {
     setText(newText);
   }
 
-  const handleExtraSpace=()=>{
-    let newText = text.split(/[ ]+/);
-    setText(newText.join(" "));
-  }
+
   const handleOnChange = (event) => {
     console.log("On change");
     // Update the state with the value of the textarea
@@ -55,8 +52,6 @@ function TextForm(props) {
       <button className="btn btn-primary mx-1" onClick={handleDownClick}>Convert To LowerCase</button>
       <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>
       <button className="btn btn-primary mx-1" onClick={handleCopyClick}>Copy Text</button>
-      <button className="btn btn-primary mx-1" onClick={handleExtraSpace}>Handle Space</button>
-
     </div>
     <div className="container">
         <h1> Your text Summary</h1>
