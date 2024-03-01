@@ -4,6 +4,12 @@ import About from "./components/About";
 import TextForm from "./components/TextForm";
 import Navbar from "./components/navbar";
 import Alert from "./components/Alert";
+import{
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+}from "react-router-dom";
 
 
 function App() {
@@ -45,7 +51,7 @@ setAlert(null);
       <Alert alert={alert}/>
       <div className="container my-3">
         <TextForm showAlert={showAlert} mode={mode}/>
-      {/* <About/> */}
+       <About/> 
       </div>
     </>
   );

@@ -30,11 +30,6 @@ function TextForm(props) {
 
   }
 
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> 1b074a2887ec0ce5f5f870dd141fdc6f50b85449
   const handleOnChange = (event) => {
     console.log("On change");
     // Update the state with the value of the textarea
@@ -63,15 +58,11 @@ function TextForm(props) {
       <button className="btn btn-primary mx-1" onClick={handleDownClick}>Convert To LowerCase</button>
       <button className="btn btn-primary mx-1" onClick={handleClearClick}>Clear Text</button>
       <button className="btn btn-primary mx-1" onClick={handleCopyClick}>Copy Text</button>
-<<<<<<< HEAD
-     
-=======
->>>>>>> 1b074a2887ec0ce5f5f870dd141fdc6f50b85449
     </div>
     <div className="container my-3" style={{color:props.mode ==='dark'?'white':'black'}}>
         <h1> Your text Summary</h1>
         <p>{text.split(" ").length} words and {text.length}characters</p>
-        <p>{0.008 * text.split(" spli").length } Minutes read </p>
+        <p>{0.008 * text.split(" split").length } Minutes read </p>
         <h2>Preview</h2>
         <p>{text.length>0? null:"Enter something in the textbox to preview"}</p>
         <p>{text}</p>
